@@ -1,6 +1,6 @@
 {
   "name": "picas/wp-template-hierarchy-everywhere",
-  "description": "A WordPress plugin that implements the \"template hierarchy\" concept for any template",
+  "description": "A WordPress plugin that implements the 'template hierarchy' concept for any template",
   "type": "wordpress-plugin",
   "keywords": [ "wordpress", "template", "template hierarchy", "theme" ],
   "homepage": "https://gitlab.com/e-picas/wp-template-hierarchy-everywhere",
