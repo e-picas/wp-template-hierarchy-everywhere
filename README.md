@@ -83,6 +83,13 @@ The WordPress rules just sucks.
 Period.
 
 
+## Support
+
+Is you find a bug, please use the [support panel](https://gitlab.com/e-picas/wp-template-hierarchy-everywhere/issues) 
+of the repository. You may first search in existing issues to check if the bug you figured has not been
+reported yet.
+
+
 ## License
 
 This program is free software: you can redistribute it and/or modify
