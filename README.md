@@ -58,7 +58,6 @@ methods in replacement of common ones:
 | get_sidebar()        | get_sidebar_hierarchical()       |
 | comments_template()  | comments_template_hierarchical() |
 | get_search_form()    | get_search_form_hierarchical()   |
-|----------------------|----------------------------------|
 
 
 ## Installation
