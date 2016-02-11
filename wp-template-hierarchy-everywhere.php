@@ -118,7 +118,9 @@
  */
 
 // test to avoid multi-loading
-if (function_exists('get_theme_relative_path')) return;
+if (function_exists('get_theme_relative_path')) {
+    return;
+}
 
 /**
  * Get a file path relative to `STYLESHEETPATH` or `TEMPLATEPATH`
@@ -218,23 +220,23 @@ function get_template_part_hierarchical($slug, $name = null, $include = true)
      */
     do_action("get_template_part_{$slug}", $slug, $name);
 
-    if     ( is_404()            && $template = get_404_template_part($slug, $name)            ) :
-    elseif ( is_search()         && $template = get_search_template_part($slug, $name)         ) :
-    elseif ( is_front_page()     && $template = get_front_page_template_part($slug, $name)     ) :
-    elseif ( is_home()           && $template = get_home_template_part($slug, $name)           ) :
-    elseif ( is_post_type_archive() && $template = get_post_type_archive_template_part($slug, $name) ) :
-    elseif ( is_tax()            && $template = get_taxonomy_template_part($slug, $name)       ) :
-    elseif ( is_attachment()     && $template = get_attachment_template_part($slug, $name)     ) :
-    elseif ( is_single()         && $template = get_single_template_part($slug, $name)         ) :
-    elseif ( is_page()           && $template = get_page_template_part($slug, $name)           ) :
-    elseif ( is_singular()       && $template = get_singular_template_part($slug, $name)       ) :
-    elseif ( is_category()       && $template = get_category_template_part($slug, $name)       ) :
-    elseif ( is_tag()            && $template = get_tag_template_part($slug, $name)            ) :
-    elseif ( is_author()         && $template = get_author_template_part($slug, $name)         ) :
-    elseif ( is_date()           && $template = get_date_template_part($slug, $name)           ) :
-    elseif ( is_archive()        && $template = get_archive_template_part($slug, $name)        ) :
-    elseif ( is_comments_popup() && $template = get_comments_popup_template_part($slug, $name) ) :
-    elseif ( is_paged()          && $template = get_paged_template_part($slug, $name)          ) :
+    if (is_404()                && $template = get_404_template_part($slug, $name)) :
+    elseif (is_search()         && $template = get_search_template_part($slug, $name)) :
+    elseif (is_front_page()     && $template = get_front_page_template_part($slug, $name)) :
+    elseif (is_home()           && $template = get_home_template_part($slug, $name)) :
+    elseif (is_post_type_archive() && $template = get_post_type_archive_template_part($slug, $name)) :
+    elseif (is_tax()            && $template = get_taxonomy_template_part($slug, $name)) :
+    elseif (is_attachment()     && $template = get_attachment_template_part($slug, $name)) :
+    elseif (is_single()         && $template = get_single_template_part($slug, $name)) :
+    elseif (is_page()           && $template = get_page_template_part($slug, $name)) :
+    elseif (is_singular()       && $template = get_singular_template_part($slug, $name)) :
+    elseif (is_category()       && $template = get_category_template_part($slug, $name)) :
+    elseif (is_tag()            && $template = get_tag_template_part($slug, $name)) :
+    elseif (is_author()         && $template = get_author_template_part($slug, $name)) :
+    elseif (is_date()           && $template = get_date_template_part($slug, $name)) :
+    elseif (is_archive()        && $template = get_archive_template_part($slug, $name)) :
+    elseif (is_comments_popup() && $template = get_comments_popup_template_part($slug, $name)) :
+    elseif (is_paged()          && $template = get_paged_template_part($slug, $name)) :
     else :
         $template = get_index_template_part($slug, $name);
     endif;
@@ -362,9 +364,9 @@ function get_search_form_hierarchical($echo = true)
      *
      * @link https://core.trac.wordpress.org/ticket/19321
      */
-    do_action( 'pre_get_search_form' );
+    do_action('pre_get_search_form');
 
-    $format = current_theme_supports( 'html5', 'search-form' ) ? 'html5' : 'xhtml';
+    $format = current_theme_supports('html5', 'search-form') ? 'html5' : 'xhtml';
 
     /**
      * Filter the HTML format of the search form.
@@ -374,28 +376,28 @@ function get_search_form_hierarchical($echo = true)
      * @param string $format The type of markup to use in the search form.
      *                       Accepts 'html5', 'xhtml'.
      */
-    $format = apply_filters( 'search_form_format', $format );
+    $format = apply_filters('search_form_format', $format);
 
     $search_form_template = template_part_hierarchical('searchform');
-    if ( '' != $search_form_template ) {
+    if ('' != $search_form_template) {
         ob_start();
-        require( $search_form_template );
+        require($search_form_template);
         $form = ob_get_clean();
     } else {
-        if ( 'html5' == $format ) {
-            $form = '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '">
+        if ('html5' == $format) {
+            $form = '<form role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '">
                 <label>
-                    <span class="screen-reader-text">' . _x( 'Search for:', 'label' ) . '</span>
-                    <input type="search" class="search-field" placeholder="' . esc_attr_x( 'Search &hellip;', 'placeholder' ) . '" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search for:', 'label' ) . '" />
+                    <span class="screen-reader-text">' . _x('Search for:', 'label') . '</span>
+                    <input type="search" class="search-field" placeholder="' . esc_attr_x('Search &hellip;', 'placeholder') . '" value="' . get_search_query() . '" name="s" title="' . esc_attr_x('Search for:', 'label') . '" />
                 </label>
-                <input type="submit" class="search-submit" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
+                <input type="submit" class="search-submit" value="'. esc_attr_x('Search', 'submit button') .'" />
             </form>';
         } else {
-            $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ) . '">
+            $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url(home_url('/')) . '">
                 <div>
-                    <label class="screen-reader-text" for="s">' . _x( 'Search for:', 'label' ) . '</label>
+                    <label class="screen-reader-text" for="s">' . _x('Search for:', 'label') . '</label>
                     <input type="text" value="' . get_search_query() . '" name="s" id="s" />
-                    <input type="submit" id="searchsubmit" value="'. esc_attr_x( 'Search', 'submit button' ) .'" />
+                    <input type="submit" id="searchsubmit" value="'. esc_attr_x('Search', 'submit button') .'" />
                 </div>
             </form>';
         }
@@ -408,15 +410,17 @@ function get_search_form_hierarchical($echo = true)
      *
      * @param string $form The search form HTML output.
      */
-    $result = apply_filters( 'get_search_form', $form );
+    $result = apply_filters('get_search_form', $form);
 
-    if ( null === $result )
+    if (null === $result) {
         $result = $form;
+    }
 
-    if ( $echo )
+    if ($echo) {
         echo $result;
-    else
+    } else {
         return $result;
+    }
 }
 
 /**
@@ -453,7 +457,7 @@ function get_search_form_hierarchical($echo = true)
  * @param bool   $separate_comments Optional. Whether to separate the comments by comment type.
  *                                  Default false.
  */
-function comments_template_hierarchical( $file = '/comments.php', $separate_comments = false )
+function comments_template_hierarchical($file = '/comments.php', $separate_comments = false)
 {
     if ($file == '/comments.php') {
         $template = template_part_hierarchical('comments', '', true);
@@ -992,7 +996,7 @@ function get_attachment_template_part($slug, $name = null, $return_items = false
         } else {
             list($type, $subtype) = array($attachment->post_mime_type, '');
         }
-        if ( ! empty( $subtype ) ) {
+        if (! empty($subtype)) {
             $templates[] = "{$slug}-{$type}-{$subtype}.php";
             $templates[] = "{$slug}-{$subtype}.php";
         }
