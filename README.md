@@ -67,7 +67,7 @@ methods in replacement of common ones:
 1.  Activate the plugin through the 'Plugins' screen in WordPress
 1.  You're done
 
-You can also embed a standalone version of this library in a plugin or a theme (a simple test will avoid multi-loading).
+You can also embed a standalone version of this library in a plugin or a theme (internal tests will avoid multi-loading).
 
 NOTE - For those who are [Composer](http://getcomposer.org/) users, the package is registered
 as `picas/wp-template-hierarchy-everywhere`.
