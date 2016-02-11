@@ -69,6 +69,9 @@ methods in replacement of common ones:
 
 You can also embed a standalone version of this library in a plugin or a theme (internal tests will avoid multi-loading).
 
+Please see the *releases* of the repository to get last version (the `master` branch can have few commits forward but
+the last release is the best choice).
+
 NOTE - For those who are [Composer](http://getcomposer.org/) users, the package is registered
 as `picas/wp-template-hierarchy-everywhere`.
 

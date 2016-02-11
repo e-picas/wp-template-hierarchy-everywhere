@@ -71,6 +71,9 @@
  *
  * You can also embed a standalone version of this library in a plugin or a theme (internal tests will avoid multi-loading).
  *
+ * Please see the *releases* of the repository to get last version (the `master` branch can have few commits forward but
+ * the last release is the best choice).
+ *
  * NOTE - For those who are [Composer](http://getcomposer.org/) users, the package is registered
  * as `picas/wp-template-hierarchy-everywhere`.
  *
@@ -101,7 +104,7 @@
  *
  *
  * @package   WP_Template_Hierarchy_Everywhere
- * @version   1.0.0
+ * @version   1.0.0-beta
  * @link      http://gitlab.com/e-picas/wp-template-hierarchy-everywhere
  * @author    picas (Pierre Cassat) & contributors
  * @copyright Copyright (c) 2016, Pierre Cassat
@@ -111,7 +114,7 @@
  * Plugin Name: WP Template Hierarchy Everywhere
  * Plugin URI:  http://gitlab.com/e-picas/wp-template-hierarchy-everywhere
  * Description: The template hierarchy concept applied everywhere.
- * Version:     1.0.0
+ * Version:     1.0.0-beta
  * Author:      picas
  * Author URI:  http://picas.fr/
  * Copyright:   2016, Pierre Cassat
