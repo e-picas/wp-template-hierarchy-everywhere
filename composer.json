@@ -3,11 +3,11 @@
   "description": "A WordPress plugin that implements the 'template hierarchy' concept for any template",
   "type": "wordpress-plugin",
   "keywords": [ "wordpress", "template", "template hierarchy", "theme" ],
-  "homepage": "https://gitlab.com/e-picas/wp-template-hierarchy-everywhere",
+  "homepage": "https://github.com/e-picas/wp-template-hierarchy-everywhere",
   "license": "GPL-3.0+",
   "support": {
-    "issues": "http://gitlab.com/e-picas/wp-template-hierarchy-everywhere/issues",
-    "source": "http://gitlab.com/e-picas/wp-template-hierarchy-everywhere/tree/master"
+    "issues": "http://github.com/e-picas/wp-template-hierarchy-everywhere/issues",
+    "source": "http://github.com/e-picas/wp-template-hierarchy-everywhere/tree/master"
   },
   "authors": [{
     "name": "Pierre Cassat",

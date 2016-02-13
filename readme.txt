@@ -12,4 +12,4 @@ This plugin is an implementation of the "template hierarchy" concept of WordPres
 It redefines some internal methods often used in templates to use the "template hierarchy" concept
 everywhere: for header, footer, sidebar, search form, sub-templates and assets.
 
-Please read the original repository [README](https://gitlab.com/e-picas/wp-template-hierarchy-everywhere) for more information.
+Please read the original repository [README](https://github.com/e-picas/wp-template-hierarchy-everywhere) for more information.
