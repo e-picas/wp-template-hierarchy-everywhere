@@ -68,6 +68,9 @@ methods in replacement of common ones:
 | get_search_form()    | get_search_form_hierarchical()   |
 
 
+Have a look at the [manual](https://github.com/e-picas/wp-template-hierarchy-everywhere/blob/master/MANUAL.md)
+for a development of some of these features.
+
 = Official public repository =
 
 Add star and read future issues about wp-template-hierarchy-everywhere on [GitHub](http://github.com/e-picas/wp-template-hierarchy-everywhere)!

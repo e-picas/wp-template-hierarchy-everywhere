@@ -61,6 +61,9 @@
  * | get_search_form()    | get_search_form_hierarchical()   |
  * |----------------------|----------------------------------|
  *
+ * Have a look at the [manual](https://github.com/e-picas/wp-template-hierarchy-everywhere/blob/master/MANUAL.md)
+ * for a development of some of these features.
+ *
  *
  * ## Installation
  *
